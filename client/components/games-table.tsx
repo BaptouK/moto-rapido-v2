@@ -11,6 +11,7 @@ import {
 import {Badge} from "@/components/ui/badge"
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 export type Game = {
     id: string
@@ -65,7 +66,11 @@ export function GamesTable({games}: { games: Game[] }) {
                                         renderStatus(game)
                                     }</TableCell>
                                     <TableCell className="text-right">
-                                        <Button variant={"outline"} className={"cursor-pointer"}>Rejoindre</Button>
+                                        <Button variant={"outline"} className={"cursor-pointer"} asChild>
+                                            <Link href={"/game"}>
+                                                Rejoindre
+                                            </Link>
+                                        </Button>
                                     </TableCell>
                                 </TableRow>
                             ))
