@@ -3,9 +3,16 @@ project(server)
 
 set(INCLUDE_PATHS asio-1.30.0/include crow/include)
 
-add_executable(server main.cpp)
+add_executable(server
+        src/main.cpp
+        src/lobby.cpp
+        src/utils.cpp
+        src/player.cpp
+        include/lobby.h
+        include/player.h
+        include/utils.h
+)
 
 target_include_directories(server PUBLIC ${INCLUDE_PATHS})
 
-# Link against the required Winsock library
-target_link_libraries(server PRIVATE ws2_32 mswsock)
+target_link_libraries(server PRIVATE ws2_32 mswsock )
