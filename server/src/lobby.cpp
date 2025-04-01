@@ -8,7 +8,7 @@
 Lobby::Lobby(Player& owner) : lobby_owner{owner}{
     /* créer/rejoidnre une page avec certains
      parametre pour diférencier les games créer*/
-    this->UUID = generate_UUID(true); // Créer un uuid de type server
+    this->UUID = utils::generate_UUID(true); // Créer un uuid de type server
 };
 Lobby::~Lobby(){
     // Envoyé a tout les clients qu'il faut suppr les UUID des navs

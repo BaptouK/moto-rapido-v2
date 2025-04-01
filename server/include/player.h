@@ -3,15 +3,14 @@
 
 class Player{
 public:
-    Player() = delete;
-    Player(std::string new_name);
+    Player();
     ~Player();
 
-    void setName(std::string new_name);
+    void const setName(std::string new_name);
     std::string getName();
 
     void setID(std::string new_id);
-    std::string getID();
+    std::string getID() const;
 private:
     std::string name;
     std::string id;

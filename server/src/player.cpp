@@ -3,13 +3,15 @@
 #include <iostream>
 #include <string>
 
-Player::Player(std::string new_name) : name{new_name}{
-    this->id = generate_UUID(false);
+Player::Player(){
+    this->id = utils::generate_UUID(false);
 };
 
-Player::~Player(){};
+Player::~Player() {
+    //Suprimer les UUID Coté clients et coté serveur
+};
 
-void Player::setName(std::string new_name){
+void const Player::setName(std::string new_name){
     this->name = new_name;
 };
 
@@ -21,6 +23,6 @@ void Player::setID(std::string new_id){
     this->id = new_id;
 };
 
-std::string Player::getID(){
+std::string Player::getID() const{
     return this->id;
 }

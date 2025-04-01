@@ -5,12 +5,12 @@ set(INCLUDE_PATHS asio-1.30.0/include crow/include)
 
 add_executable(server
         src/main.cpp
-        src/lobby.cpp
         src/utils.cpp
         src/player.cpp
-        include/lobby.h
+        src/lobby.cpp
         include/player.h
         include/utils.h
+        include/lobby.h
 )
 
 target_include_directories(server PUBLIC ${INCLUDE_PATHS})
