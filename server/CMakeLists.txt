@@ -11,6 +11,8 @@ add_executable(server
         include/player.h
         include/utils.h
         include/lobby.h
+        include/minigame/minigame.h
+        src/minigame/minigame.cpp
 )
 
 target_include_directories(server PUBLIC ${INCLUDE_PATHS})
